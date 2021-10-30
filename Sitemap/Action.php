@@ -18,7 +18,6 @@ class Sitemap_Action extends Typecho_Widget implements Widget_Interface_Do
 		->where('table.contents.status = ?', 'publish')
 		->where('table.contents.created < ?', $options->gmtTime)
 		->where('table.contents.type = ?', 'post')
-		->limit(200)
 		->order('table.contents.created', Typecho_Db::SORT_DESC));
 		
 		
